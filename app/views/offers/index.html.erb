@@ -1,0 +1,22 @@
+<p class="text-success"><%= notice %></p>
+
+<% content_for :title, "Offers" %>
+
+<h1 class="mb-4">Ofertas Laborales</h1>
+
+<div id="offers" class="row">
+  <% @offers.each do |offer| %>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <%= render offer %>
+          <p>
+            <%= link_to "Show this offer", offer, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New offer", new_offer_path, class: "btn btn-success mt-3" %>

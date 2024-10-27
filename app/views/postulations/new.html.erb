@@ -1,0 +1,11 @@
+<% content_for :title, "Nueva Postulacion" %>
+
+<div class="container mt-4">
+  <h1 class="mb-4">Nueva Postulación</h1>
+
+  <%= render "form", postulation: @postulation %>
+
+  <div class="mt-3">
+    <%= link_to "Back to Postulations", postulations_path, class: "btn btn-secondary" %>
+  </div>
+</div>

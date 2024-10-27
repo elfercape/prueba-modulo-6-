@@ -1,0 +1,36 @@
+<%= form_with(model: offer, class: "needs-validation", novalidate: true) do |form| %>
+  <% if offer.errors.any? %>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+      <ul>
+        <% offer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control", required: true %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_area :description, class: "form-control", rows: 3, required: true %>
+  </div>
+
+  <div class="mb-3 form-check">
+    <%= form.check_box :active, class: "form-check-input" %>
+    <%= form.label :active, class: "form-check-label" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :limit, class: "form-label" %>
+    <%= form.date_field :limit, class: "form-control", required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
