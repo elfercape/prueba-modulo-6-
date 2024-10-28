@@ -20,7 +20,7 @@ class OffersController < ApplicationController
   # POST /offers or /offers.json
   def create
     @offer = Offer.new(offer_params)
-    @offer.user = current_user # Asigna el creador como el usuario actual
+    @offer.user_id  = current_user.id # Asigna el creador como el usuario actual
 
     if @offer.save
       redirect_to offers_path, notice: 'Oferta laboral creada.'
@@ -64,12 +64,14 @@ class OffersController < ApplicationController
     end
 
     def authorize_esteban
+      puts current_user.name
+      puts current_user.id
       redirect_to root_path, alert: 'Acceso denegado.' unless current_user.admin?
     end
 
     # Only allow a list of trusted parameters through.
     def offer_params
-      params.require(:offer).permit(:title, :description)
+      params.require(:offer).permit(:title, :description, :active, :limit)
     end
 end
 

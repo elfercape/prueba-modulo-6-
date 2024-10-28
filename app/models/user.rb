@@ -14,3 +14,4 @@ class User < ApplicationRecord
     presence: { message: "No puede estar vacío" },
     length: { in: 1..100, message: "debe tener entre 1 y 100 caracteres" }
 end
+
