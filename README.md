@@ -1,25 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+¿Quien eres? Soy Fernando Lopes San Martin
 
-Things you may want to cover:
+¿De donde eres? Santiago de Chile Region Metropolitana.
 
-* Ruby version
+¿A que te dedicas? Soy Back Office para cliente Claro Call Center Konecta Chile.
 
-* System dependencies
+¿Cual es tu Formacion? Soy Contador General del instituto Los Leones.
 
-* Configuration
+¿Cuales son tus experiencias previas? Estoy cursando un bootcamp en Inforcap por talento digital. En desarrollo en Ruby on Rails para emprendimiento en empresas Startup.
 
-* Database creation
+¿Como y a traves de que medios pueden contactarte? https://www.linkedin.com/in/elfercap-elfer-aa52711b3/
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # prueba-modulo-6-
